@@ -1,0 +1,39 @@
+//Gradle
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.0'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter API for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    // Use Selenium for browser automation.
+    implementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+
+    // Use RestAssured for testing and validating REST services in Java.
+    implementation 'io.rest-assured:rest-assured:5.4.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.16.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+    implementation 'org.json:json:20231013'
+
+    // Use Cucumber for behavior-driven development.
+    testImplementation("io.cucumber:cucumber-java:latest.release") 
+    testImplementation("io.cucumber:cucumber-junit:latest.release") 
+    testImplementation("io.cucumber:cucumber-junit-platform-engine:latest.release") 
+    testImplementation("org.junit.platform:junit-platform-suite:latest.release")
+}
+
+test {
+    useJUnitPlatform()
+}

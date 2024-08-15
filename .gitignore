@@ -1,0 +1,7 @@
+.gradle
+.vscode
+build
+allure-results
+.DS_Store
+.gitattributes
+bin
